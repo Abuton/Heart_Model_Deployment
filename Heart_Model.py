@@ -70,9 +70,9 @@ def main():
 
         diagnosis = st.button('Diagnosis')
         if diagnosis:
-            prediction = model.predict(df)
+            prediction = str(model.predict(df))
 
-            st.write(f"Your Diagnosis result return {np.array_str(prediction)}")
+            st.write(f"Your Diagnosis result return {prediction}")
 
             if prediction == ['Disease']:
                 option = st.selectbox('Who would you like us to contact?',
